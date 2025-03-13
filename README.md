@@ -1,0 +1,1 @@
+Questo repository contiene appunti, esercizi e materiali utili per il corso di Basi di Dati. Il corso copre i concetti fondamentali dei database, la modellazione dei dati, il linguaggio SQL e le tecniche di gestione delle basi di dati relazionali.
