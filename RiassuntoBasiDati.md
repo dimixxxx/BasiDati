@@ -262,9 +262,75 @@ il prodotto cartesiano *r* $\times$ *s* è una nuova relazione definita sull'ins
 
 ### **Operatore Join**
 
-**Theta-join** ($\bowtie_{\theta}$)
+**Theta-Join** ($\bowtie_{\theta}$)
 
-Date due relazioni *r* = R(X) e *s* = S(Y) con *X* e *Y* disgiunti
+Date due relazioni *r* = R(X) e *s* = S(Y) con *X* e *Y* disgiunti, il Theta-Join *r* $\bowtie_{\theta}$ *s* è una relazione definita su *XY* composta dalle ennuple risultato della concatenazione di ennuple di *r* con ennuple di *s* che soddisfano le condizioni di confronto *A*$\theta$*B* con A $\in$ X e B $\in$ Y
+
+- $\theta$ è una espressione composta per mezzo di operatori di confronto ($=, \neq, >, <, \geq, \leq$)
+- Se il confronto è di uguaglianza, l'operazione è detta **Equijoin**
+- Possiamo notare che il join R $\bowtie_{A=B}$ S è del tutto equivalente all'operazione $\sigma_{A=B}$(R $\times$ S)
+
+**Join naturale** ($\bowtie$)
+
+Date due relazioni *r*(YX) e *s*(XZ), il join naturale di *r* e *s* è l'operazione che combina le tuple delle due relazioni basandosi sull'uguaglianza dei valori dell'attributo X, il quale è comune ad entrambe.
+
+Possiamo dare le seguenti definizioni:
+
+- Due ennuple sono *joinabili* se è possibile effettuare l'operazione di join su di esse
+- Una ennupla è detta *dangling* quando non contribuisce all'operazione di join
+- Una operazione di join viene detta *completa* quando non contiene ennuple dangling 
+- Tramite una *ridenominazione*($p$) possiamo rendere compatibili all'operazione di join due attribuiti uguali concentualmente ma con sintassi differente
+
+**Proprietà del join naturale**
+
+- Il join naturale è commutativo e associativo
+- Può essere espresso in termini di:
+  - Prodotto cartesiano
+  - Selezione ennuple con valori uguali per attributi in comune
+  - Proiezione di *r* e *s* eliminando duplicazioni
+- Se *r*(X), *s*(Y) con X $\cap$ Y = $\varnothing$, allora *r*$\bowtie$*s* = *r*$\times$*s*
+- Se *r*(X), *s*(Y) con X = Y, allora *r*$\bowtie$*s* = *r*$\cap$*s*
+
+**Outer Join**
+
+L'outer join è una variante del join che conserva anche le ennuple dangling (quelle che non trovano corrispondenza), inserendo valori NULL nei campi mancanti delle relazioni.
+Questo permette di evitare la perdita di dati che si verifica nei join naturali e theta join.
+
+Tipologie di Outer Join:
+
+1) Left outer join (Left Join)
+  - Mantiene tutte le ennuple della relazione di sinistra
+2) Right Outer Join (Right Join)
+  - Mantiene tutte le ennuple della relazione di destra
+3) Full Outer Join (Full Join)
+  - Mantiene tutte le ennuple di entrambi le relazioni
+
+### **Divisione**
+
+La divisione si applica solo a relazioni *r*(Z) e *s*(X), dove X $\subseteq$ Z.
+La divisione va a restituire una relazione T(Y), dove Y = Z - X, contenente tutte le ennuple *t* tali che:
+
+- Esistano ennuple *tr* in *r* con tr[Y] = t
+- Per ogni ennupla *ts* in *s*, esista una ennupla *tr* in *r* con tr[X] = ts
+
+Intuitivamente la divisione verifica una condizione o corrispondenza fra una o più ennuple di *r* e tutte le tuple di *s*.
+
+### **Equivalenza di espressioni algebriche**
+
+**Caratteristiche generali**
+
+- 
+- 
+- 
+- 
+
+**regole di trasformazione** 
+
+- 
+- 
+- 
+- 
+- 
 
 
 
