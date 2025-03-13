@@ -1,5 +1,13 @@
-# \centering\huge\textbf{\textcolor{violet}{Riassunto Basi di Dati}}
+---
+title: "Riassunto basi di dati"
+author: "Dimix"
+date: "2025-03-13"
+lang: it-IT
+toc: true
+---
 
+
+\newpage
 ## \Large\textbf{\textcolor{red}{Lezione 1 – Introduzione}}
 \vspace{3pt}
 \hrule
@@ -92,7 +100,7 @@ Gli utenti del DMBS utilizzano un software client per comunicare con il server, 
 -	Interfaccia grafica
 -	Interfaccia web
 
-
+\newpage
 ## \Large\textbf{\textcolor{red}{Lezione 2 – Il modello relazionale}}
 \vspace{3pt}
 \hrule
@@ -205,7 +213,7 @@ Un vincolo di integrità relazione impedisce l’inserimento di un valore in una
 
 ### **Le forme di relazione**
 
-
+\newpage
 ## \Large\textbf{\textcolor{red}{Lezione 4 – L'algebra relazionale}}
 \vspace{3pt}
 \hrule
@@ -248,4 +256,15 @@ Nella proiezione si tratta di una **decomposizione verticale** in quanto va a se
 ### **Operatori binari**
 
 **Prodotto cartesiano** ($\times$)
+
+Date due relazioni *r* = R(X) e *s* = S(Y) con *X* $\cap$ *Y* = $\varnothing$
+il prodotto cartesiano *r* $\times$ *s* è una nuova relazione definita sull'insieme di attributi *XY* contenente tutte le possibili combinazioni delle tuple di *r* e *s*.
+
+### **Operatore Join**
+
+**Theta-join** ($\bowtie_{\theta}$)
+
+Date due relazioni *r* = R(X) e *s* = S(Y) con *X* e *Y* disgiunti
+
+
 
